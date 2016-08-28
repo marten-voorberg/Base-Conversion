@@ -11,7 +11,7 @@ def get_index_of_char(string, char):
     print("ERROR: Character not found in the string")
     return None
 
-def convert_number_to_dec(number, chars):
+def convert_base_to_dec(number, chars):
     res = 0
     base = len(chars)
     length = len(number)
@@ -39,13 +39,5 @@ def convert_dec_to_base(number, chars):
 def convert_base_to_base(number, chars1, chars2):
     # First we convert the number to decimal from base1
     # Then we convert to decimal number to base2
-    dec = convert_number_to_dec(number, chars1)
+    dec = convert_base_to_dec(number, chars1)
     return convert_dec_to_base(dec, chars2)
-
-# Example:
-# We want to convert the octal(base 8) number '7245' to binary(base 2)
-chars_base8  = "01234567"
-chars_base2 = "01"
-number_base8 = "7245"
-answer = convert_base_to_base(number_base8, chars_base8, chars_base2)
-print(answer)
