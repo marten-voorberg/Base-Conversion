@@ -45,7 +45,7 @@ def convert_base_to_base(number, chars1, chars2):
 # Example:
 # We want to convert the octal(base 8) number '7245' to binary(base 2)
 chars_base8  = "01234567"
-chars_base11 = "01"
+chars_base2 = "01"
 number_base8 = "7245"
 answer = convert_base_to_base(number_base8, chars_base8, chars_base11)
 print(answer)
